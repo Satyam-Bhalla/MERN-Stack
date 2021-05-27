@@ -1,0 +1,44 @@
+body {
+    /* background-color: rgba(254, 205, 255, 0.1); */
+    /* background-image: url("../images/background.jpg"); */
+    color: brown;
+    /* text-align: center; */
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 50px;
+    /* font-weight: inherit;  */
+    background-repeat: no-repeat;
+    /* background-repeat: repeat-y; */
+    background-position: right top;
+}
+
+.special{
+    opacity: 1;
+    /* border: 2px solid red; */
+    border-width: 1px;
+    border-style: solid;
+    border-color: royalblue;
+    /* border-radius: 50px; */
+    /* border-top-style: dotted; */
+    /* border-right-style: groove; */
+    /* border-bottom-style: dashed; */
+    border-left-width: 8px;
+    /* margin: 50px; */
+    /* margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 50px;
+    padding: 20px; */
+    margin: auto;
+    padding: auto;
+    /* width: auto; */
+
+}
+
+div:hover{
+    background-color: red;
+    color: white;
+}
+
+img{
+    opacity: 0.5;
+}
+
