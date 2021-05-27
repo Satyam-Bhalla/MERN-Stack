@@ -1,0 +1,21 @@
+body{
+    /* text-align: center; */
+    background-color: antiquewhite;
+    
+}
+
+table, th, td{
+    border: 1px solid black;
+}
+
+.firstClass{
+    text-align: center;
+}
+
+#firstId{
+    background-color: aqua;
+}
+
+#firstId{
+    background-color: brown;
+}
