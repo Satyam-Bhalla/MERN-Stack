@@ -1,0 +1,10 @@
+Step 1:- Create github account
+Step 2:- Download gi from git-scm website
+Step 3:- Create a repository
+Step 4:- Clone the reporsitory using -> git clone repo URL
+Step 5:- Make the changes in the IDE/code.
+Step 6:- Run the following commands
+    i.)   git status -> To check the status of your github reporsitory
+    ii.)  git add . -> To add all files in the next commit
+    iii.) git commit -m "Your message about the changes in the repo"
+    iv.) git push -> To push the code to VCS(Version control system like Github or Bitbucket)
