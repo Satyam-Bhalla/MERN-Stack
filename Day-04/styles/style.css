@@ -1,8 +1,10 @@
 body{
     /* text-align: justify; */
     /* background-image: linear-gradient(yellow,green); */
-    background-repeat: no-repeat;
-    
+    /* background-repeat: no-repeat; */
+    /* background-image: linear-gradient(to bottom right, red, blue); */
+    /* background-repeat: space; */
+    /* background-image: linear-gradient(90deg, orange, red); */
 }
 
 p{
@@ -114,3 +116,56 @@ div.description{
     z-index: 1;
 }
 
+#borderRadius{
+    border: 2px solid black;
+    border-radius: 10px 30px 10px 30px;
+    padding: 5px;
+    box-shadow: 3px 3px 5px grey;
+    /* display: none; */
+       /* visibility: hidden; */
+}
+
+/* @media screen and (max-width: 700px) {
+    #borderRadius{
+        background-color: brown;
+        float: right; 
+        display: inline;
+        width: 50%;
+       
+    }
+} */
+
+/* @media screen and (max-width:900px) and (min-width:600px) {
+    body{
+        background-color: brown !important;
+    }
+} */
+
+.flex-container{
+    display: flex;
+    background-color: brown;
+    flex-wrap: wrap;
+    /* height: 500px;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center; */
+}
+
+.flex-container > div{
+    padding: 20px;
+    margin: 10px;
+    color: white;
+    font-weight: bold;
+    
+}
+
+.flex-container > div:hover{
+    background-color: cadetblue;
+    color: black;
+}
+
+@media screen and (max-width: 600px) {
+    .flex-container{
+        flex-direction: column;
+    }
+}
