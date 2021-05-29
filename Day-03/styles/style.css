@@ -42,3 +42,7 @@ img{
     opacity: 0.5;
 }
 
+span{
+    border: 2px solid red;
+    padding: 0px;
+}
