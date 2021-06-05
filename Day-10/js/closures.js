@@ -4,15 +4,12 @@
 
 // Example 1
 let b = 20;
-function x(){
-    let a = 10;
-    return function y(){
-        console.log(a,b);
-    };
-    
+function x() {
+  let a = 10;
+  return function y() {
+    console.log(a, b);
+  };
 }
-
-
 
 let z = x();
 // z();
@@ -20,43 +17,42 @@ let z = x();
 // x()();
 
 // Example 2
-function a(){
-    var q = 10;
-    function c(){
-        console.log(q);
-    }
-    q = 100;
-    return c;
+function a() {
+  var q = 10;
+  function c() {
+    console.log(q);
+  }
+  q = 100;
+  return c;
 }
 
 // a()();
 
 // Example 3
-function outer(){
-    var r = 100;
-    function inner(){
-        var t = 200;
-        function innermost(){
-            console.log(r,t);
-        }
-        return innermost;
+function outer() {
+  var r = 100;
+  function inner() {
+    var t = 200;
+    function innermost() {
+      console.log(r, t);
     }
-    return inner;
+    return innermost;
+  }
+  return inner;
 }
-
 
 let inner = outer();
 let innermost = inner();
 // innermost();
 
-console.log("*********Tricky Questions*******")
+console.log("*********Tricky Questions*******");
 
-function counter(){
-    var count = 0;
-    return function incrementCounter(){
-        count++;
-        console.log(count);
-    }
+function counter() {
+  var count = 0;
+  return function incrementCounter() {
+    count++;
+    console.log(count);
+  };
 }
 
 // var counter1 = counter();
@@ -66,11 +62,28 @@ function counter(){
 // counter2();
 
 // Task
-function timer(){
-    for(var i=1;i<=5;i++){
-        setTimeout(function (){
-            console.log(i);
-        }, i*1000);
+// function timer(){
+//     for(let i=1;i<=5;i++){
+//         setTimeout(function (){
+//             console.log(i);
+//         }, i*1000);
+//     }
+//     // console.log(i);
+// }
+// timer();
+
+function timerWithClosure() {
+  for (var i = 1; i <= 5; i++) {
+    
+    function closure(x) {
+      setTimeout(function () {
+        console.log(x);
+      }, x * 1000);
     }
+
+    
+    closure(i);
+  }
 }
-timer();
+
+timerWithClosure();

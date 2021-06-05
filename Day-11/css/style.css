@@ -1,0 +1,20 @@
+.parent{
+    background-color: cornflowerblue;
+    height: 200vh;
+    /* position: relative; */
+}
+
+.child-one{
+    background-color: darkcyan;
+    position: fixed;
+     top: 0px;
+    /* right: 0px;  */
+}
+
+.child-two{
+    background-color: darksalmon;
+}
+
+.child-three{
+    background-color: darkviolet;
+}
