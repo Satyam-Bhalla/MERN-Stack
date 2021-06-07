@@ -125,11 +125,48 @@ function changeCase(){
 // }).catch(failureCallback){
 
 // }
-const myPromise = new Promise(function(resolve,reject) {
-    // if condition mets then resolve otherwise reject
-    if(true){
-        resolve("Promise resolved");
-    }else{
-        reject("Promise rejected");
-    }
-})
+// const myPromise = new Promise(function(resolve,reject) {
+//     // if condition mets then resolve otherwise reject
+//     if(true){
+//         resolve("Promise resolved");
+//     }else{
+//         reject("Promise rejected");
+//     }
+// })
+
+
+// Prototypes in Javascript with Inheritance
+let arr = [1,2,3];
+
+let obj = {
+    "firstname": "Satyam",
+    "lastName": "Bhalla"
+}
+
+let obj2 = {
+    city: "Amritsar"
+}
+
+
+// Never use inheritance like this
+obj2.__proto__ = obj;
+
+
+// Array.prototype.push = function(){
+//     console.log("Item Pushed")
+// }
+
+// Array.prototype.print = function(arr2){
+//     for(let i=0;i<arr2.length;i++){
+//         console.log(arr2[i]);
+//     }
+// }
+
+
+function fun(){
+    console.log("Function called");
+}
+
+
+
+
