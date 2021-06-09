@@ -16,18 +16,20 @@ async function getData() {
 }
 // let response = await getData();
 
-const server =  http.createServer( async (req, res) => {
-  //   console.log(req);
-//   let response = { name: "Satyam" };
-  let response = await axios.get(
-    "https://pokeapi.co/api/v2/pokemon/pikachu"
-  );
-
-  console.log(response);
-
-  res.statusCode = 200;
-  res.setHeader("Content-Type", "application/json");
-  res.end(JSON.stringify(response));
+const server = http.createServer((req, res) => {
+  
+    //   console.log(req);
+    //   let response = { name: "Satyam" };
+    axios
+      .get("https://pokeapi.co/api/v2/pokemon/pikachu")
+      .then((response) => {
+        console.log(response);
+        res.statusCode = 200;
+        res.setHeader("Content-Type", "application/json");
+        res.end(JSON.stringify(response.data));
+      })
+      .catch((err) => console.log(err));
+      
 });
 
 server.listen(port, hostname, () => {
