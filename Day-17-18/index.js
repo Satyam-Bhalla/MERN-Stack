@@ -40,7 +40,7 @@ app.use((error, req, res, next) => {
 //   res.send({page: "Login", message: "Please submit your credentials!!"});
 // });
 
-mongoose.connect('Put connection string here',
+mongoose.connect('Put your connection string here',
   {
     useUnifiedTopology: true,
     useNewUrlParser: true

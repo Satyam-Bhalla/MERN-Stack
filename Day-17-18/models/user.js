@@ -7,7 +7,8 @@ const userSchema = new Schema({
     name: {type: String, required: true},
     age: {type: Number},
     email: {type: String, required: true, unique: true},
-    password: {type: String, required: true, minLength: 6}
+    password: {type: String, required: true, minLength: 6},
+    role: {type: String, required: true}
 });
 
 userSchema.plugin(uniqueValidator);

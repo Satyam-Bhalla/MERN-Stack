@@ -5,7 +5,8 @@ const Schema = mongoose.Schema;
 
 const adminSchema = new Schema({
     email: {type: String, required: true, unique: true},
-    password: {type: String, required: true, minLength: 6}
+    password: {type: String, required: true, minLength: 6},
+    role: {type: String, required: true}
 });
 
 adminSchema.plugin(uniqueValidator);
