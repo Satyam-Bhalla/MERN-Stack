@@ -1,0 +1,6 @@
+Important commands:-
+
+1.) npx create-react-app <project name>
+2.) 
+    i.) npm install -g create-react-app
+    ii.) create-react-app <project name>
