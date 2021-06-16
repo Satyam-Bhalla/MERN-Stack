@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import SeasonShow from '../src/components/SeasonShow';
 // import App from '../src/components/App';
 
 
@@ -25,11 +26,29 @@ import ReactDOM from 'react-dom';
  *  6.) State can be updated using the function setState
  */ 
 
-class App extends React.Component{
-  constructor(props){
-    super(props);
-    this.state = { lat: null, long: null, errorMessage: "" };
 
+/**
+ *  Component Lifecycle
+ * 1.) Constructor   -> Good place to do one time setup
+ * 2.) render -> content visible on screen  -> Avoid doing any computation other than returning JSX
+ * 3.) ComponentDidMount (content visible on screen) -> Good place to do data loading
+ * 4.) ComponentDidUpdate (Sit and wait for updates) -> Good place to do more data loading when state/props change 
+ * 5.) ComponentWillUnmount(Sit and wait until this component is not longer shown) -> Good place to do cleanup(Specifically for non react stuff)   
+ **/
+
+
+
+
+class App extends React.Component{
+  // constructor(props){
+  //   super(props);
+  //   this.state = { lat: null, long: null, errorMessage: "" };
+
+    
+  // }
+  state = { lat: null, long: null, errorMessage: "" };
+  
+  componentDidMount(){
     window.navigator.geolocation.getCurrentPosition(
       position => {
         this.setState({lat: position.coords.latitude, long: position.coords.longitude});
@@ -37,9 +56,12 @@ class App extends React.Component{
       err => {
         this.setState({errorMessage: err.message});
       }
-    )
+    );
   }
-  
+
+  // componentDidUpdate(){
+  //   console.log('My component was just updated - it rerendered');
+  // }
 
   render(){
     if(this.state.errorMessage && !this.state.lat && !this.state.long){
@@ -47,11 +69,7 @@ class App extends React.Component{
     }
 
     if(!this.state.errorMessage && this.state.lat && this.state.long){
-      return <div>
-              <h1>Location: </h1>
-              <h3>Latitude: {this.state.lat} </h3>
-              <h3>Longitude: {this.state.long}</h3>
-          </div>
+      return <SeasonShow lat={this.state.lat} long={this.state.long}  />
     }
 
     return <h3>Loading</h3>
