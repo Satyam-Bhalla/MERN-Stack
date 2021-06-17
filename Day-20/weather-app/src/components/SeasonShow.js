@@ -13,9 +13,9 @@ const SeasonShow = ({lat,long}) => {
     const season = getSeason(lat, new Date().getMonth());
     const text = season === 'Summer' ? "It's quite hot" : "It's chilly";
     return ( 
-        <div>
+        <div style={{backgroundColor: 'red'}}>
               <h1>{text} </h1>
-          </div>
+        </div>
      );
 }
  

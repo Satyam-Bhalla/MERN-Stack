@@ -13,6 +13,14 @@ const port = 3001;
 app.use(bodyParser.json());
 
 
+app.use((req,res,next) => {
+  res.setHeader('Access-Control-Allow-Origin', "*");
+  res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization, Role');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PATCH, DELETE');
+  next();
+})
+
+
 // Routing
 app.use('/api/v1/user', userRoutes);
 app.use('/api/v1/admin', adminRoutes);
