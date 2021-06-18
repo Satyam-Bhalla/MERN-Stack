@@ -13,14 +13,14 @@ class Counter extends Component {
         </span>
         <button
           className="btn btn-primary btn-sm m-2"
-          onClick={() => this.props.onIncrement(this.props.counter)}
+          onClick={this.props.onIncrement.bind(this,this.props.counter)}
         >
           Increment
         </button>
         <button
           className="btn btn-secondary btn-sm m-2"
           onClick={() => this.props.onDecrement(this.props.counter)}
-          disabled={this.props.counter.value>0?"":"disabled"}
+          disabled={this.props.counter.value<=0?"disabled":""}
         >
           Decrement
         </button>

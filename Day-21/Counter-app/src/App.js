@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import Navbar from "../src/components/navbar";
 import Counters from "../src/components/counters";
 
+import './shared/css/style.css';
+
 class App extends Component {
   state = {
     counters: [
@@ -13,21 +15,21 @@ class App extends Component {
   };
 
   handleReset = () => {
-    const counters = this.state.counters.map((a) => {
-      console.log(a);
-      a.value = 0;
-      return a;
+    const counters = this.state.counters.map((item) => {
+      // console.log(a);
+      item.value = 0;
+      return item;
     });
 
     this.setState({ counters });
   };
 
   handleIncrement = (counter) => {
-    console.log(counter);
+    // console.log(counter);
     const counters = [...this.state.counters];
     const index = counters.indexOf(counter);
 
-    console.log(counters[index]);
+    // console.log(counters[index]);
     counters[index] = {...counter};
     counters[index].value++;
     this.setState({counters})
@@ -47,8 +49,10 @@ class App extends Component {
 
   handleDelete = (id) => {
       console.log("Delete Event Called" ,id);
-      const counters = this.state.counters.filter((a) => a.id !== id);
-      this.setState({counters})
+      console.log(this.state.counters);
+      const counters = this.state.counters.filter((obj) => obj.id !== id);
+      console.log(counters);
+      this.setState({counters});
   }
 
   render() {
