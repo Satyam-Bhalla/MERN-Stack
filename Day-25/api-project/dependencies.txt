@@ -1,0 +1,4 @@
+1.) npm i axios 
+2.) npm i Bootstrap@4.1.1
+3.) npm i react-toastify
+4.) npm i react-uuid
